@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC Student Project Videos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>AMC Student Project Videos</h1>
+    <div class="video-gallery">
+        {% for video in videos %}
+        <div class="video-item">
+            <h2>{{ video.title }}</h2>
+            <iframe src="{{ video.url }}" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
